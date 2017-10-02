@@ -47,7 +47,7 @@ public class Registration extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (edtfname.getText().toString().length() == 0) {
-                    edtfname.setError("Please input your firstname!");
+                    edtfname.setError("Please input your firstname..!");
                 } else if (edtlname.getText().toString().length() == 0) {
                     edtlname.setError("Please input your lastname!");
                 } else if (edtheight.getText().toString().length() == 0) {
