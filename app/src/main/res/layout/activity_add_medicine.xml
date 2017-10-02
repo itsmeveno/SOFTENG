@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#505c76"
+    android:orientation="vertical"
+    tools:context="softeng.android.mobile.healthwatch.AddMedicine">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="16dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <Button
+            android:id="@+id/save_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#00FFFFFF"
+            android:text="ADD" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="#55cebd"
+                    android:padding="10dp"
+                    android:src="@drawable/user" />
+
+                <EditText
+                    android:id="@+id/edtmedicineName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="#FFFFFF"
+                    android:hint="Medicine Name"
+                    android:inputType="textPersonName"
+                    android:padding="16dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#91949b"
+
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/reminder_desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:gravity="top|left"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:minLines="6"
+                android:padding="10dp"
+                android:scrollHorizontally="false"
+                android:textColor="#000000"
+                android:textColorHint="#91949b"
+                android:textSize="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="#55cebd"
+                    android:padding="10dp"
+                    android:src="@drawable/user" />
+
+                <EditText
+                    android:id="@+id/numberOfMedicine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#FFFFFF"
+                    android:hint="Number of medicine to take"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:minLines="1"
+                    android:padding="16dp"
+                    android:textColor="#033d01"
+                    android:textColorHint="#91949b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="#55cebd"
+                    android:padding="10dp"
+                    android:src="@drawable/user" />
+
+                <Spinner
+                    android:id="@+id/medicineVariant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/custom_spinner_background"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="#55cebd"
+                    android:padding="10dp"
+                    android:src="@drawable/user" />
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#FFFFFF"
+                    android:hint="Medicine price"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:minLines="1"
+                    android:padding="16dp"
+                    android:textColor="#033d01"
+                    android:textColorHint="#91949b" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:onClick="setDate"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/date_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/date" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/date_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/set_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:onClick="setTime"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="17dp"
+                    android:src="@drawable/time" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/time_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/set_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#FFFFFF"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/repeat_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/repeat" />
+
+                <LinearLayout
+                    android:id="@+id/repeat_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/repeat_icon"
+                    android:layout_alignStart="@+id/repeat_icon"
+                    android:layout_alignTop="@+id/repeat_icon"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/repeat_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Repeat"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/set_repeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/repeat_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:checked="false"
+                    android:onClick="onSwitchRepeat"
+                    android:textOff="Off"
+                    android:textOn="On" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RepeatNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:onClick="setRepeatNo"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/repeat_no_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/repeat" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/repeat_no_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/repeat_no_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Repetition Interval"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/set_repeat_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RepeatType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:onClick="selectRepeatType"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/repeat_type_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="17dp"
+                    android:src="@drawable/repeat" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/repeat_type_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/repeat_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type of Repetition"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/set_repeat_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/select"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_margin="5dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/sound1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/selectsound" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sound1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sound_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Sound"
+                        android:textColor="#020f43"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

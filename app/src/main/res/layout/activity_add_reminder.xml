@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#505c76"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#55cebd"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="You need to take this medicine"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/reminder_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Medicine Name: "
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Medicine Description: "
+            android:textColor="#000000"
+            android:textSize="17dp" />
+        />
+
+        <TextView
+            android:id="@+id/txtnumberOfmedicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Number of Medicine take: "
+            android:textColor="#000000"
+            android:textSize="17dp" />
+        />
+
+        <TextView
+            android:id="@+id/checkup_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Time"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnskip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                android:text="Skip"
+                android:textColor="#b3b4b4" />
+
+            <Button
+                android:id="@+id/btntake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="#55cebd"
+                android:clickable="true"
+                android:text="Take" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#55cebd"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text='" Health Tips "'
+            android:textColor="#fdfffd"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txtHealthTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#fdfffd"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

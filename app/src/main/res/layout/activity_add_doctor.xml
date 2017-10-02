@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#505c76"
+    android:orientation="vertical"
+    tools:context="softeng.android.mobile.healthwatch.AddDoctor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="12">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="11"
+                android:src="@drawable/eddoctor" />
+
+            <EditText
+                android:id="@+id/edtdoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Doctor Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#91969b"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="12">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="11"
+                android:src="@drawable/edspeciality" />
+
+            <EditText
+                android:id="@+id/edtSpeciality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Speciality"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#91969b"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="12">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="11"
+                android:src="@drawable/edhospital" />
+
+            <EditText
+                android:id="@+id/edtHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Hospital"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#91969b"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="12">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="11"
+                android:src="@drawable/edlocation" />
+
+            <EditText
+                android:id="@+id/edtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Location"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#91969b"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="12">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="11"
+                android:src="@drawable/eddoctor" />
+
+            <EditText
+                android:id="@+id/edtContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Contact"
+                android:inputType="number"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#91969b"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#559362"
+            android:padding="10dp"
+            android:text="Add My Doctor" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/eddoctor" />
+
+</LinearLayout>

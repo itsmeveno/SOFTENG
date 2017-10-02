@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#505c76"
+    tools:context="softeng.android.mobile.healthwatch.Expenses">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="Medicine Expenses"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFF"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="12">
+
+                <ImageView
+                    android:id="@+id/imgmedicine"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/medicinename" />
+
+                <Spinner
+                    android:id="@+id/spnmedicineName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgamount"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/money" />
+
+                <TextView
+                    android:id="@+id/txtamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:text="Amount"
+                    android:textColor="#91949b"
+                    android:textSize="18dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFF"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <ImageView
+                    android:id="@+id/imgtotalAmount"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/amount" />
+
+                <TextView
+                    android:id="@+id/txttotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="Total Amount"
+                    android:textColor="#91949b"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFF"
+                android:orientation="horizontal"
+                android:textColor="#999e99"
+                android:weightSum="12">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/monthly" />
+
+                <TextView
+                    android:id="@+id/txtmonthly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="Montly Amount"
+                    android:textColor="#91949b"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFF"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <ImageView
+                    android:id="@+id/imgyearly"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/yearly" />
+
+                <TextView
+                    android:id="@+id/txtyearAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="Yearly Amount"
+                    android:textColor="#91949b"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#30c3ee"
+        android:text="BACK"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>
